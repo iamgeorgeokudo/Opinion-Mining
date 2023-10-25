@@ -1,10 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'user/base.html' %}
 
-</body>
-</html>
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h1>About Us</h1>
+        <p>
+            Welcome to OpinionMining, your go-to platform for sentiment analysis and opinion mining.
+        </p>
+        <p>
+            Our mission is to provide accurate and insightful analysis of opinions expressed on various topics
+            across the internet. Whether it's product reviews, social media sentiments, or any other form of
+            public opinion, we've got you covered.
+        </p>
+        <p>
+            We utilize state-of-the-art natural language processing techniques to extract meaningful insights
+            from text data. Our team of experts is dedicated to delivering high-quality results that help you
+            make informed decisions.
+        </p>
+        <p>
+            Thank you for choosing OpinionMining. We look forward to serving you!
+        </p>
+    </div>
+{% endblock %}

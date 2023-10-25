@@ -1,0 +1,42 @@
+/* static/styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.jumbotron {
+    background-color: #f8f9fa;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.rounded-circle {
+    border-radius: 50%;
+}
+
+.custom-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.footer {
+    position: absolute
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}

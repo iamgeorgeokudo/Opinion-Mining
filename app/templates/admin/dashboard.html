@@ -1,10 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Admin Dashboard</title>
-</head>
-<body>
-    <p>ADMIN</p>
-</body>
-</html>
+{% extends 'admin/base.html'%}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block title %}Admin Dashboard - Home{% endblock %}
+
+{% block content %}
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Welcome to the Admin Dashboard</h1>
+        <p class="lead">Efficiently manage the application with powerful admin tools.</p>
+        <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                {{ render_card('User Management', 'Manage accounts and permissions.', 'Go to User Management') }}
+            </div>
+            <div class="col-md-4">
+                {{ render_card('Feedback Analysis', 'Analyze user feedback and opinions.', 'Go to Feedback Analysis') }}
+            </div>
+            <div class="col-md-4">
+                {{ render_card('Reports', 'Generate and view reports.', 'Go to Reports') }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% macro render_card(title, description, btn_text) %}
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">{{ title }}</h5>
+            <p class="card-text">{{ description }}</p>
+            <a href="#" class="btn btn-primary">{{ btn_text }}</a>
+        </div>
+    </div>
+{% endmacro %}

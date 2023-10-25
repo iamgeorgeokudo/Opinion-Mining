@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Internal server errror</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends 'user/base.html' %}
+<!--ERROR 500-->
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>500</h1>
+            <h2>Internal Server Error</h2>
+            <p>Sorry, but the page you were trying to view does not exist.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

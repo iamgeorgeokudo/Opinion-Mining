@@ -1,10 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Index</title>
-</head>
-<body>
-<p>Index</p>
-</body>
-</html>
+{% extends 'user/base.html' %}
+
+{% block title %}Analyze Opinions{% endblock %}
+
+{% block content %}
+  <div class="jumbotron text-center">
+    <h1 class="display-4">Unlock Insights from Opinions</h1>
+    <p class="lead">Analyzing opinions has never been easier. Gain valuable insights from user feedback, reviews, and more.</p>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('main.analyze') }}" role="button">Get Started</a>
+  </div>
+
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="{{ url_for('static', filename='img/image1.png') }}" alt="Image 1" class="custom-image">
+        <h4>Understand Trends</h4>
+        <p>Identify patterns and trends in opinions to make informed decisions.</p>
+      </div>
+      <div class="col-md-4">
+        <img src="{{ url_for('static', filename='img/image2.png') }}" alt="Image 2" class="custom-image">
+        <h4>Enhance User Experience</h4>
+        <p>Improve products and services based on user feedback and preferences.</p>
+      </div>
+      <div class="col-md-4">
+        <img src="{{ url_for('static', filename='img/image3.png') }}" alt="Image 3" class="custom-image">
+        <h4>Competitive Advantage</h4>
+        <p>Stay ahead of the competition by understanding customer sentiments.</p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

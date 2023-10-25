@@ -17,3 +17,8 @@ class RegistrationForm(FlaskForm):
                              validators=[DataRequired(), EqualTo('password', message='Password must match')])
     confirm_password = PasswordField('Confirm Password', validators=[DataRequired()])
     submit = SubmitField('Register')
+
+
+class AnalysisForm(FlaskForm):
+    content = TextAreaField('Content', validators=[DataRequired()])
+    submit = SubmitField('Analyze')
